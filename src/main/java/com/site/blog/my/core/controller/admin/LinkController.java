@@ -52,7 +52,7 @@ public class LinkController {
                        @RequestParam("linkUrl") String linkUrl,
                        @RequestParam("linkRank") Integer linkRank,
                        @RequestParam("linkDescription") String linkDescription) {
-        if (linkType == null || linkType < 0 || linkRank == null || linkRank < 0 || StringUtils.isEmpty(linkName) || StringUtils.isEmpty(linkName) || StringUtils.isEmpty(linkUrl) || StringUtils.isEmpty(linkDescription)) {
+        if (linkType == null || linkType < 0 || linkRank == null || linkRank < 0 || StringUtils.isEmpty(linkName) || StringUtils.isEmpty(linkType) || StringUtils.isEmpty(linkUrl) || StringUtils.isEmpty(linkDescription)) {
             return ResultGenerator.genFailResult("参数异常！");
         }
         BlogLink link = new BlogLink();
